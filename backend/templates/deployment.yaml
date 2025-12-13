@@ -13,14 +13,10 @@ spec:
         app: {{ .Release.Name }}
     spec:
       containers:
-      - name: {{ .Release.Name }}
-        image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.backend.image.name }}:{{ .Values.backend.image.tag }}"
-        # devopsprodacr01.azurecr.io/backend:__TAG__
-        ports:
-        - containerPort: {{ .Values.backend.port }}
-        env:
-        - name: CONNECTION_STRING
-          value: "{{ .Values.backend.connectionString }}"
-          
-#"Driver={ODBC Driver 18 for SQL Server};Server=tcp:sqlsvr-devops-prod-indcentral.database.windows.net,1433;Database=sqdb-devops-prod-sonar;Uid=Sqlserver;Pwd=Sql@1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
-"
+        - name: {{ .Release.Name }}
+          image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.backend.image.name }}:{{ .Values.backend.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.backend.port }}
+          env:
+            - name: CONNECTION_STRING
+              value: "{{ .Values.backend.connectionString }}"
