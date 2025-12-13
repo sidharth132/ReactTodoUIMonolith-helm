@@ -1,0 +1,16 @@
+common:
+  containerRegistryURL: "prodaksclusterregistry.azurecr.io"
+  ingressClassName: nginx
+
+
+backend:
+  replicas: 2
+  image:
+    name: backend
+    tag: 42
+  port: 8000
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sqlserversid.database.windows.net,1433;Database=sqldatabasesid;Uid=Sqlserver;Pwd=Sql@1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  ServicePort: 8000
+  targetPort: 8000
+
+

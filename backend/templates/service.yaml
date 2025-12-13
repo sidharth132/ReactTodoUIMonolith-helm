@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-apps
+spec:
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+  - name: http
+    port: {{ .Values.backend.port }}
+    targetPort: {{ .Values.backend.targetPort }}
+  type: LoadBalancer
