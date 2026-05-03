@@ -1,5 +1,5 @@
 common:
-  containerRegistryURL: "prodaksclusterregistry.azurecr.io"
+  containerRegistryURL: "sidharthacr.azurecr.io"
   ingressClassName: nginx
 
 
@@ -7,7 +7,7 @@ backend:
   replicas: 2
   image:
     name: backend
-    tag: 42
+    tag: 55
   port: 8000
   connectionString: "Driver={ODBC Driver 17 for SQL Server};Server=tcp:sidharthsqlserver.database.windows.net,1433;Database=sidharthsqldatabase;Uid=sidharthsqlserver;Pwd=Sidr@j123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ServicePort: 8000
