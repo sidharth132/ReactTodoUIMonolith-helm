@@ -17,6 +17,6 @@ spec:
           image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.backend.image.name }}:{{ .Values.backend.image.tag }}"
           ports:
             - containerPort: {{ .Values.backend.port }}
-          env:
-            - name: CONNECTION_STRING
-              value: "{{ .Values.backend.connectionString }}"
+          # env:
+          #   - name: CONNECTION_STRING
+          #     value: "{{ .Values.backend.connectionString }}"
