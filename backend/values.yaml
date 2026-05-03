@@ -9,7 +9,7 @@ backend:
     name: backend
     tag: 42
   port: 8000
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sqlserversid.database.windows.net,1433;Database=sqldatabasesid;Uid=Sqlserver;Pwd=Sql@1234;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 17 for SQL Server};Server=tcp:sidharthsqlserver.database.windows.net,1433;Database=sidharthsqldatabase;Uid=sidharthsqlserver;Pwd=Sidr@j123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ServicePort: 8000
   targetPort: 8000
 
